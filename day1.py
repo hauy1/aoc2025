@@ -1,3 +1,6 @@
+import time
+t1 = time.perf_counter()
+
 with open('day1.txt') as f:
     instructions = f.read().splitlines()
 
@@ -44,3 +47,5 @@ for instruction in instructions:
     dial = end
 
 print(f"Part 2: {count}")
+t2 = time.perf_counter()
+print(f"Time: {t2 - t1} seconds")

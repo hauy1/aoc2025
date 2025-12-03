@@ -1,3 +1,6 @@
+import time
+t1 = time.perf_counter()
+
 with open('day2.txt') as f:
     ranges = [tuple(map(int, x.split('-'))) for x in f.read().split(',')]
 
@@ -25,3 +28,6 @@ for start, end in ranges:
 
 print(f"Part 1: {total1}")
 print(f"Part 2: {total2}")
+
+t2 = time.perf_counter()
+print(f"Time: {t2 - t1} seconds")
